@@ -392,7 +392,7 @@ We have also made available for download the simulation data from the Pencil Cod
 		np.save(path_to_save+f'tau_intensity_{var}.npy', np.array([cube.tau, cube.intensity]))
 		#
 		# Only save the particle density data for the first run, as these are independent of the RT
-		if band == 0 and r_ == 10 and scattering:
+		if band == 0 and scattering:
 			# Calculate the max particle density per species
 			for i in range(len(stoke)): max_rho_per_species[var, i] = np.max(cube.density_per_species[i])
 			#
@@ -401,7 +401,7 @@ We have also made available for download the simulation data from the Pencil Cod
 			for i in range(len(stoke)): num_particles[var, i] = len(np.where(_species_ == i+1)[0])
 
 	# Only need to save the particle density data for the first run, these are independent of the RT analysis
-	if band == 0 and r_ == 10 and scattering:
+	if band == 0 and scattering:
 		# The particle evolution data is independent of the radiative transfer therefore will be saved on the main directory
 		# Save the maximum particle densities over time, shown in first row of Fig. 3
 		np.savetxt(path_to_save[:9]+f'max_densities_{r_}au.txt', max_rho_per_species)
