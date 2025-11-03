@@ -1212,7 +1212,7 @@ This plotting procedure includes an **include_scattering** variable, which if se
 	axes[3][1].set_ylim((0.0, 0.32)) if specific_directory == 'scattering' else None
 
 	# Set titles for the columns
-	for col, location in enumerate(locations): axes[0][col].set_title(location)
+	for col, location in enumerate(locations): axes[0][col].set_title(location.replace('au', ' au'))
 
 	# Set the axes labels
 	axes[0][0].set_ylabel('Mass Excess')
