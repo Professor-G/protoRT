@@ -954,7 +954,7 @@ The effective optical depth and corresponding intensity maps at the output plane
 	    ax = fig2.add_subplot(gs[0, j]); axs[0, j] = ax
 	    cf_m = ax.contourf(np.linspace(-0.1, 0.1, 256), np.linspace(-0.1, 0.1, 256),
 	                       np.log10(ti[0]), levels=levels_m, cmap='plasma', extend='both')
-	    ax.set_xlim(0.1, -0.1)
+	    ax.set_xlim(-0.1, 0.1)
 	    ax.set_xticks([-0.1, -0.05, 0, 0.05, 0.1])
 	    ax.set_yticks([-0.1, -0.05, 0, 0.05, 0.1])
 	    ax.set_xticklabels(['-0.1', '-0.05', '0.0', '0.05', '0.1'])
@@ -989,7 +989,7 @@ The effective optical depth and corresponding intensity maps at the output plane
 	    cf_b = ax.contourf(np.linspace(-0.1, 0.1, 256), np.linspace(-0.1, 0.1, 256),
 	                       np.log10(ti[1]), levels=levels_b, cmap='coolwarm',
 	                       extend='both')
-	    ax.set_xlim(0.1, -0.1)
+	    ax.set_xlim(-0.1, 0.1)
 	    ax.set_xticks([-0.1, -0.05, 0, 0.05, 0.1])
 	    ax.set_yticks([-0.1, -0.05, 0, 0.05, 0.1])
 	    ax.set_xticklabels(['-0.1', '-0.05', '0.0', '0.05', '0.1'])
@@ -1244,7 +1244,7 @@ This plotting procedure includes an **include_scattering** variable, which if se
 	    fig.suptitle('Radiative Transfer Results', y=0.93)
 	    plt.savefig(f'results_{specific_directory}.png', dpi=300, bbox_inches='tight')
 	else:
-	    fig.suptitle('Radiative Transfer Results: Absorption Only', y=0.93)
+	    fig.suptitle('Radiative Transfer Results: Absorption-only', y=0.93)
 	    plt.savefig(f'results_{specific_directory}.png', dpi=300, bbox_inches='tight')
 
 	plt.show()
