@@ -556,7 +556,7 @@ The following code shows the time evolution of the three simulations. This uses 
 	size_handles = [Line2D([0], [0], color=colors[i], linestyle=linestyles[i], label=label) for i, label in enumerate(labels)]
 	fig.legend(handles=size_handles, loc='upper center', title=r'$a$', frameon=True, fancybox=True, ncol=4, bbox_to_anchor=(0.5, 0.97))
 
-	fig.suptitle('Self-Gravitating Streaming Instability Simulations', y=0.985)
+	fig.suptitle('Self-gravitating Streaming Instability Simulations', y=0.985)
 	plt.savefig('Simulation_Time_Evolution.png', dpi=300, bbox_inches='tight')
 	plt.show()
 
